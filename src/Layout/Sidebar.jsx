@@ -1,16 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 
-export default function Sidebar() {
+
+export default function Sidebar({sidebarToggle}) {
     return (
-        <div className="fixed top-16 left-0 bg-white w-64 h-screen border-r border-gray-200 dark:border-gray-700 ">
+        <div className={`fixed top-20 left-0 bg-white w-${sidebarToggle ? '64' : '0'} h-screen border-r border-gray-200 dark:border-gray-700 mt-0`}>
             <h1>testing</h1>
-
-            <div>
-                <Navbar>
-                </Navbar>
-            </div>
         </div>
     )
 }

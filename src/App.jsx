@@ -1,15 +1,17 @@
 
 import Navbar from "./Layout/Navbar"
 import Sidebar from "./Layout/Sidebar"
-import { useState } from "react";
+import SidebarContextProvider from "./Context/SidebarContext"
 
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(false);
+
   return (
     <>
-      <Navbar sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}></Navbar>
-      <Sidebar sidebarToggle={sidebarToggle}></Sidebar>
-    </>
+      <SidebarContextProvider>
+        <Navbar></Navbar>
+        <Sidebar></Sidebar>
+      </SidebarContextProvider>
+    </>    
   )
 }
 

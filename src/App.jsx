@@ -2,15 +2,18 @@
 import Navbar from "./Layout/Navbar"
 import Sidebar from "./Layout/Sidebar"
 import SidebarContextProvider from "./Context/SidebarContext"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
 
   return (
     <>
-      <SidebarContextProvider>
-        <Navbar></Navbar>
-        <Sidebar></Sidebar>
-      </SidebarContextProvider>
+      <BrowserRouter>
+        <SidebarContextProvider>
+          <Navbar></Navbar>
+          <Sidebar></Sidebar>
+        </SidebarContextProvider>
+      </BrowserRouter>
     </>    
   )
 }

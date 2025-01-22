@@ -17,6 +17,7 @@ const SidebarContextProvider = ({children}) => {
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const side = SidebarContext;
 export default SidebarContextProvider;
 
